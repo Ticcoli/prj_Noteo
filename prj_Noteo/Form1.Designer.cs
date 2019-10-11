@@ -34,6 +34,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btConnexion = new System.Windows.Forms.Button();
+            this.tbNom = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // llCreer
@@ -87,11 +89,29 @@
             this.btConnexion.Text = "Connexion";
             this.btConnexion.UseVisualStyleBackColor = true;
             // 
+            // tbNom
+            // 
+            this.tbNom.Location = new System.Drawing.Point(288, 128);
+            this.tbNom.Name = "tbNom";
+            this.tbNom.Size = new System.Drawing.Size(225, 22);
+            this.tbNom.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(195, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Nom :";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbNom);
             this.Controls.Add(this.llCreer);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -113,6 +133,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btConnexion;
+        private System.Windows.Forms.TextBox tbNom;
+        private System.Windows.Forms.Label label1;
     }
 }
 
