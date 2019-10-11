@@ -108,5 +108,10 @@ namespace prj_Noteo
         {
 
         }
+
+        private void MDIParent1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
