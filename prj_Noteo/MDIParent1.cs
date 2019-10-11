@@ -103,5 +103,10 @@ namespace prj_Noteo
                 childForm.Close();
             }
         }
+
+        private void aJouterNoteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
