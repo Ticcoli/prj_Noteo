@@ -181,7 +181,8 @@
             // 
             this.aJouterNoteToolStripMenuItem.Name = "aJouterNoteToolStripMenuItem";
             this.aJouterNoteToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.aJouterNoteToolStripMenuItem.Text = "AJouter Note";
+            this.aJouterNoteToolStripMenuItem.Text = "Ajouter Note";
+            this.aJouterNoteToolStripMenuItem.Click += new System.EventHandler(this.aJouterNoteToolStripMenuItem_Click);
             // 
             // columnHeader1
             // 
