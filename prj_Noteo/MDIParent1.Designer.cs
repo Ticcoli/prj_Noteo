@@ -56,6 +56,7 @@
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.modifierNomProfsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -154,7 +155,8 @@
             this.supprimerNoteToolStripMenuItem,
             this.exporterToolStripMenuItem,
             this.réinitialiserToolStripMenuItem,
-            this.aJouterNoteToolStripMenuItem});
+            this.aJouterNoteToolStripMenuItem,
+            this.modifierNomProfsToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.optionsToolStripMenuItem.Text = "Options";
@@ -239,6 +241,12 @@
             this.columnHeader12.Text = "Technologie";
             this.columnHeader12.Width = 94;
             // 
+            // modifierNomProfsToolStripMenuItem
+            // 
+            this.modifierNomProfsToolStripMenuItem.Name = "modifierNomProfsToolStripMenuItem";
+            this.modifierNomProfsToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.modifierNomProfsToolStripMenuItem.Text = "Modifier Nom Profs";
+            // 
             // MDIParent1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,6 +296,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ToolStripMenuItem modifierNomProfsToolStripMenuItem;
     }
 }
 
