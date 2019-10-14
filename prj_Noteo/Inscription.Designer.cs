@@ -54,6 +54,7 @@
             this.tbNom.Name = "tbNom";
             this.tbNom.Size = new System.Drawing.Size(225, 22);
             this.tbNom.TabIndex = 20;
+            this.tbNom.TextChanged += new System.EventHandler(this.tbNom_TextChanged);
             // 
             // tbMdp
             // 
@@ -61,6 +62,7 @@
             this.tbMdp.Name = "tbMdp";
             this.tbMdp.Size = new System.Drawing.Size(225, 22);
             this.tbMdp.TabIndex = 19;
+            this.tbMdp.TextChanged += new System.EventHandler(this.tbMdp_TextChanged);
             // 
             // tbPrenom
             // 
@@ -68,6 +70,7 @@
             this.tbPrenom.Name = "tbPrenom";
             this.tbPrenom.Size = new System.Drawing.Size(225, 22);
             this.tbPrenom.TabIndex = 18;
+            this.tbPrenom.TextChanged += new System.EventHandler(this.tbPrenom_TextChanged);
             // 
             // label3
             // 
@@ -100,10 +103,13 @@
             // cbClasse
             // 
             this.cbClasse.FormattingEnabled = true;
+            this.cbClasse.Items.AddRange(new object[] {
+            "TEst"});
             this.cbClasse.Location = new System.Drawing.Point(352, 223);
             this.cbClasse.Name = "cbClasse";
             this.cbClasse.Size = new System.Drawing.Size(121, 24);
             this.cbClasse.TabIndex = 22;
+            this.cbClasse.SelectedIndexChanged += new System.EventHandler(this.cbClasse_SelectedIndexChanged);
             // 
             // label4
             // 

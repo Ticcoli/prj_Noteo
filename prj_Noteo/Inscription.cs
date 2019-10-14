@@ -17,20 +17,44 @@ namespace prj_Noteo
             InitializeComponent();
         }
 
-        private void Inscription_Load(object sender, EventArgs e)
+        public void VerifVide()
         {
-            if (tbPrenom.Text != "" || tbNom.Text != "" || tbMdp.Text != "" || cbClasse.Text != "")
+            if (tbPrenom.Text == "" || tbNom.Text == "" || tbMdp.Text == "" || string.IsNullOrEmpty(cbClasse.Text))
             {
                 btConnexion.Enabled = false;
             }
             else
             {
-
+                btConnexion.Enabled = true;
             }
+        }
+        private void Inscription_Load(object sender, EventArgs e)
+        {
+            VerifVide();
         }
         private void btConnexion_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbPrenom_TextChanged(object sender, EventArgs e)
+        {
+            VerifVide();
+        }
+
+        private void tbNom_TextChanged(object sender, EventArgs e)
+        {
+            VerifVide();
+        }
+
+        private void tbMdp_TextChanged(object sender, EventArgs e)
+        {
+            VerifVide();
+        }
+
+        private void cbClasse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VerifVide();
         }
     }
 }
