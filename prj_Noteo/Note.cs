@@ -8,5 +8,18 @@ namespace prj_Noteo
 {
     class Note
     {
+        //attribut privé
+
+
+        //cosntructeur
+        public Note()
+        {
+
+        }
+
+        //setter
+
+
+        //accesseur
     }
 }
