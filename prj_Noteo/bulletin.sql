@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 11 Octobre 2019 à 10:12
+-- Généré le :  Lun 14 Octobre 2019 à 11:38
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -27,9 +27,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `anneee` (
-  `id` int(5) NOT NULL,
+  `id` int(5) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `anneee`
@@ -47,13 +47,13 @@ INSERT INTO `anneee` (`id`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `eleve` (
-  `ideleve` int(5) NOT NULL,
+  `ideleve` int(5) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `classe` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`ideleve`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `eleve`
@@ -61,7 +61,9 @@ CREATE TABLE IF NOT EXISTS `eleve` (
 
 INSERT INTO `eleve` (`ideleve`, `nom`, `prenom`, `classe`, `password`) VALUES
 (1, 'Quenot', 'Maël', 'BTS2', '721a9b52bfceacc503c056e3b9b93cfa'),
-(2, 'Ballot', 'dimitry', 'BTS2', '721a9b52bfceacc503c056e3b9b93cfa');
+(2, 'Ballot', 'dimitry', 'BTS2', '721a9b52bfceacc503c056e3b9b93cfa'),
+(3, 'Letort', 'Samuel', 'BTS2', '721a9b52bfceacc503c056e3b9b93cfa'),
+(4, 'Aubertin', 'Grégoire', 'BTS1', '721a9b52bfceacc503c056e3b9b93cfa');
 
 -- --------------------------------------------------------
 
@@ -70,11 +72,11 @@ INSERT INTO `eleve` (`ideleve`, `nom`, `prenom`, `classe`, `password`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `matiere` (
-  `idMatiere` int(5) NOT NULL,
+  `idMatiere` int(5) NOT NULL AUTO_INCREMENT,
   `libelle` varchar(255) NOT NULL,
   `NomProf` varchar(255) NOT NULL,
   PRIMARY KEY (`idMatiere`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Contenu de la table `matiere`
@@ -129,12 +131,12 @@ INSERT INTO `noter` (`coeff`, `note`, `ideleveNote`, `idMatiereNote`, `idTrimest
 --
 
 CREATE TABLE IF NOT EXISTS `trimestre` (
-  `id` int(5) NOT NULL,
+  `id` int(5) NOT NULL AUTO_INCREMENT,
   `libelle` varchar(255) NOT NULL,
   `idAnnee` int(5) NOT NULL,
   PRIMARY KEY (`id`,`idAnnee`),
   KEY `idAnnee` (`idAnnee`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `trimestre`
@@ -153,9 +155,9 @@ INSERT INTO `trimestre` (`id`, `libelle`, `idAnnee`) VALUES
 -- Contraintes pour la table `noter`
 --
 ALTER TABLE `noter`
+  ADD CONSTRAINT `noter_ibfk_3` FOREIGN KEY (`idAneeNote`) REFERENCES `anneee` (`id`),
   ADD CONSTRAINT `noter_ibfk_1` FOREIGN KEY (`ideleveNote`) REFERENCES `eleve` (`ideleve`),
-  ADD CONSTRAINT `noter_ibfk_2` FOREIGN KEY (`idMatiereNote`) REFERENCES `matiere` (`idMatiere`),
-  ADD CONSTRAINT `noter_ibfk_3` FOREIGN KEY (`idAneeNote`) REFERENCES `anneee` (`id`);
+  ADD CONSTRAINT `noter_ibfk_2` FOREIGN KEY (`idMatiereNote`) REFERENCES `matiere` (`idMatiere`);
 
 --
 -- Contraintes pour la table `trimestre`
