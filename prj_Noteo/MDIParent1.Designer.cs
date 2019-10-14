@@ -57,6 +57,7 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.modifierNomProfsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listView2 = new System.Windows.Forms.ListView();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -66,10 +67,10 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 533);
+            this.statusStrip.Location = new System.Drawing.Point(0, 492);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip.Size = new System.Drawing.Size(843, 25);
+            this.statusStrip.Size = new System.Drawing.Size(845, 25);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -96,7 +97,7 @@
             this.columnHeader12});
             this.listView1.Location = new System.Drawing.Point(0, 31);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(843, 398);
+            this.listView1.Size = new System.Drawing.Size(843, 367);
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -110,7 +111,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(843, 28);
+            this.menuStrip.Size = new System.Drawing.Size(845, 28);
             this.menuStrip.TabIndex = 5;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -247,11 +248,20 @@
             this.modifierNomProfsToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.modifierNomProfsToolStripMenuItem.Text = "Modifier Nom Profs";
             // 
+            // listView2
+            // 
+            this.listView2.Location = new System.Drawing.Point(0, 398);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(843, 104);
+            this.listView2.TabIndex = 7;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
             // MDIParent1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 558);
+            this.ClientSize = new System.Drawing.Size(845, 517);
+            this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.statusStrip);
@@ -259,6 +269,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MDIParent1";
             this.Text = "MDIParent1";
+            this.Load += new System.EventHandler(this.MDIParent1_Load);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
@@ -297,6 +308,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ToolStripMenuItem modifierNomProfsToolStripMenuItem;
+        private System.Windows.Forms.ListView listView2;
     }
 }
 

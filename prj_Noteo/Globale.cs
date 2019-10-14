@@ -8,5 +8,6 @@ namespace prj_Noteo
 {
     class Globale
     {
+
     }
 }
