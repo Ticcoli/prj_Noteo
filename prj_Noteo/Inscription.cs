@@ -16,5 +16,21 @@ namespace prj_Noteo
         {
             InitializeComponent();
         }
+
+        private void Inscription_Load(object sender, EventArgs e)
+        {
+            if (tbPrenom.Text != "" || tbNom.Text != "" || tbMdp.Text != "" || cbClasse.Text != "")
+            {
+                btConnexion.Enabled = false;
+            }
+            else
+            {
+
+            }
+        }
+        private void btConnexion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

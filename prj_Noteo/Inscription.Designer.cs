@@ -95,6 +95,7 @@
             this.btConnexion.TabIndex = 15;
             this.btConnexion.Text = "Inscription";
             this.btConnexion.UseVisualStyleBackColor = true;
+            this.btConnexion.Click += new System.EventHandler(this.btConnexion_Click);
             // 
             // cbClasse
             // 
@@ -129,6 +130,7 @@
             this.Controls.Add(this.btConnexion);
             this.Name = "Inscription";
             this.Text = "Inscription";
+            this.Load += new System.EventHandler(this.Inscription_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
