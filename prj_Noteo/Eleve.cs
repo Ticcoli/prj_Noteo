@@ -39,8 +39,19 @@ namespace prj_Noteo
             this.prenomEleve = lePrenom;
         }
 
-        //accesseur
+        public void setPasswordEleve(string leMdp)
+        {
+            this.passwordEleve = leMdp;
+        }
 
+        //accesseur
+        public int getIdEleve() {   return this.idEleve;    }
+
+        public string getNomEleve() { return this.nomEleve; }
+
+        public string getPrenomEleve() { return this.prenomEleve; }
+
+        public string getMdpEleve() { return this.passwordEleve; }
 
     }
 }

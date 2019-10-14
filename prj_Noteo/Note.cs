@@ -9,7 +9,8 @@ namespace prj_Noteo
     class Note
     {
         //attribut privé
-
+        private float coef;
+        private float note;
 
         //cosntructeur
         public Note()

@@ -12,6 +12,7 @@ namespace prj_Noteo
         private int idMatiere;
         private string libMatiere;
         private string NomprofMatiere;
+        private List<Note> lesNotes;
 
         //cosntructeur
         public Matiere(int lIdMatiere, string leLib, string leNomProfMatiere)
@@ -19,6 +20,7 @@ namespace prj_Noteo
             this.idMatiere = lIdMatiere;
             this.libMatiere = leLib;
             this.NomprofMatiere = leNomProfMatiere;
+            this.lesNotes = new List<Note>();
         }
 
         //setter
