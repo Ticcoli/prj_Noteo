@@ -13,6 +13,7 @@ namespace prj_Noteo
         private string nomEleve;
         private string prenomEleve;
         private string passwordEleve;
+        List<Matiere> lesMatieres;
 
         //cosntructeur
         public Eleve(int lId, string leNom, string lePrenom, string leMdp)
@@ -21,12 +22,13 @@ namespace prj_Noteo
             this.nomEleve = leNom;
             this.prenomEleve = lePrenom;
             this.passwordEleve = leMdp;
+            this.lesMatieres = new List<Matiere>() ;
         }
 
         //setter
-        public void setId()
+        public void setId(int lID)
         {
-
+            this.idEleve = lID;
         }
 
         public void setNomEleve(string leNom)
@@ -53,5 +55,17 @@ namespace prj_Noteo
 
         public string getMdpEleve() { return this.passwordEleve; }
 
+        public List<Note> getTouteLesNotes()
+        {
+            List<Note> TotNote = new List<Note>();
+            foreach (Matiere laMatiere in lesMatieres)
+            {
+                foreach (Note laNote in laMatiere.getLesNote())
+                {
+                    TotNote.Add(laNote);
+                }
+            }
+            return TotNote;
+        }
     }
 }

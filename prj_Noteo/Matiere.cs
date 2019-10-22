@@ -56,5 +56,21 @@ namespace prj_Noteo
             return this.NomprofMatiere;
         }
 
+        public List<Note> getLesNote() { return this.lesNotes; }
+
+        public float getMoyenneParMatiere()
+        {
+
+            float sommeNote = 0;
+            float nbValeur = 0;
+            foreach(Note laNote in this.lesNotes)
+            {
+                sommeNote += (laNote.getCoef() * laNote.getNote());
+                nbValeur += laNote.getCoef();
+            }
+
+            return sommeNote/nbValeur;
+        }
+
     }
 }

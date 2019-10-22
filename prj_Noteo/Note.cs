@@ -13,14 +13,23 @@ namespace prj_Noteo
         private float note;
 
         //cosntructeur
-        public Note()
+        public Note(float leCoef, float laNote)
         {
-
+            this.note = laNote;
+            this.coef = leCoef;
         }
 
         //setter
+        public void setNote(float laNouvelleNote){ this.note = laNouvelleNote; }
 
+        public void setCoef(float leNouveauCoef) { this.coef = leNouveauCoef; }
 
         //accesseur
+
+        public float getNote() { return this.note; }
+
+        public float getCoef() { return this.coef;  }
+
+
     }
 }
